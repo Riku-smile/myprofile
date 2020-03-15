@@ -1,9 +1,8 @@
 <template lang="html">
-  <div id="about" class="">
+  <div id="contact">
     <Header />
     <main>
-      <Introduce />
-      <Skill />
+      <Form />
     </main>
     <Footer />
   </div>
@@ -12,25 +11,17 @@
 <script>
 import Header from '@/components/header.vue'
 import Footer from '@/components/footer.vue'
-import Skill from '@/components/skills.vue'
-import Introduce from '@/components/introduce.vue'
+import Form from '@/components/form.vue'
 
 export default {
-  name: 'About',
+  name: 'Contact',
   components: {
     Header,
     Footer,
-    Skill,
-    Introduce
+    Form
   }
 }
 </script>
 
 <style lang="css" scoped>
-.v-enter, .v-leave-to {
-  opacity: 0;
-}
-.v-enter-active, .v-leave-active {
-  transition: opacity .5s;
-}
 </style>

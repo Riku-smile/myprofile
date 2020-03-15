@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+/* router */
+.router {
+  @apply text-lg font-bold font-serif
+}
+.router:hover {
+  @apply opacity-50
+}
+/* normal */
+.title-h2 {
+  @apply inline-block text-3xl font-mono font-bold
+}
+/* card */
+.card-wrapper {
+  @apply bg-white max-w-sm rounded overflow-hidden shadow-lg m-2
+}
+.card-inner {
+  @apply px-6 py-4 text-center
+}
+.card-title {
+  @apply font-bold text-xl mb-2
+}
+.card-p {
+  @apply text-gray-700 text-base
+}
+.card-span {
+  @apply inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700
+}
+@tailwind utilities;
