@@ -28,4 +28,8 @@ export default {
 </script>
 
 <style lang="css" scoped>
+main {
+  max-width: 980px;
+  margin: 0 auto;
+}
 </style>

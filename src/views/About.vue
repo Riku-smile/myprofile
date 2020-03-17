@@ -27,10 +27,8 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.v-enter, .v-leave-to {
-  opacity: 0;
-}
-.v-enter-active, .v-leave-active {
-  transition: opacity .5s;
+main {
+  max-width: 980px;
+  margin: 0 auto;
 }
 </style>

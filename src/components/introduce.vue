@@ -3,31 +3,32 @@
     <div class="text-center">
       <h2 class="title-h2">Introduce</h2>
     </div>
-    <div class="bg-green-700 p-4" @click="surface = !surface">
+    <p class="text-center text-sm">↓クリックすると裏面に移行します↓</p>
+    <div class="bg-green-700 mx-auto max-w-xl p-4" @click="surface = !surface">
       <transition mode="out-in">
         <!-- 表面 -->
         <div id="surface" class="inner" v-if="surface" key="surface">
           <img src="../assets/images/メール.png" alt="プロフィール写真">
           <div class="content">
-            <span>name:</span><p>RIKU</p>
+            <span>名前:</span><p>RIKU</p>
           </div>
           <div class="content">
-            <span>Age:</span><p>19</p>
+            <span>年齢:</span><p>19</p>
           </div>
         </div>
         <!-- 裏面 -->
         <div id="reverse" class="inner" v-else key="reverse">
           <div class="content">
-            <span>Place of Birth:</span><p>横浜市</p>
+            <span>居住地:</span><p>横浜市</p>
           </div>
           <div class="content">
-            <span>BirthDay:</span><p>2000 / 08 / 26</p>
+            <span>職業:</span><p>大学生</p>
           </div>
           <div class="content">
-            <span>Profession:</span><p>大学生</p>
+            <span>好きな食べ物:</span><p>家系ラーメン</p>
           </div>
           <div class="content">
-            <span>sports:</span><p>バスケ、テニス</p>
+            <span>好きな運動:</span><p>バスケ、テニス</p>
           </div>
         </div>
       </transition>

@@ -3,7 +3,7 @@
     <div class="text-center">
       <h2 class="title-h2">Policy</h2>
     </div>
-    <div class="bg-white mx-auto max-w-lg shadow">
+    <div class="bg-white mx-4 md:mx-auto max-w-2xl shadow">
       <ul class="flex justify-start border-b">
         <li class="tab-btn">
           <button type="button" @click="isSelect(1)" :class="{'active':isActive == 1}">その１</button>
@@ -16,8 +16,9 @@
         </li>
       </ul>
       <div class="px-8 py-4">
+        <transition mode="out-in">
         <!-- 1 -->
-        <div v-if="isActive == 1">
+        <div v-if="isActive == 1" key='1'>
           <h3 class="title">納品後のご対応について</h3>
           <p class="content">
             納品後は２週間まで修正期間を設けます。<br>
@@ -26,7 +27,7 @@
           </p>
         </div>
         <!-- 2 -->
-        <div v-else-if="isActive == 2">
+        <div v-else-if="isActive == 2" key='2'>
           <h3 class="title">不都合によりお電話をお受けできなかった場合</h3>
           <p class="content">
             翌日までに必ず折り返しお電話させて頂きます。<br>
@@ -35,7 +36,7 @@
           </p>
         </div>
         <!-- 3 -->
-        <div v-else-if="isActive == 3" class="content">
+        <div v-else-if="isActive == 3" key='3'>
           <h3 class="title">期日厳守</h3>
           <p class="content">
             決められた納期、期限は必ず守ります。<br>
@@ -43,6 +44,7 @@
             その都度必要に応じてご連絡いたします。
           </p>
         </div>
+        </transition>
       </div>
     </div>
   </section>
@@ -66,18 +68,28 @@ export default {
 
 <style lang="css" scoped>
 .tab-btn {
-  @apply bg-white inline-block py-2 px-4 text-green-700 text-lg font-semibold
+  @apply bg-white inline-block py-2 px-4 text-green-700 text-lg font-bold font-mono
 }
 .tab-btn:hover {
   @apply text-green-400
 }
 .title {
-  @apply mb-2 text-xl font-serif underline
+  @apply mb-2 text-xl font-mono underline
 }
 .content {
   @apply text-lg
 }
 .active {
   @apply underline
+}
+.v-enter-active {
+  transition: all .5s ease;
+}
+.v-leave-active {
+  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.v-enter, .v-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
 }
 </style>
